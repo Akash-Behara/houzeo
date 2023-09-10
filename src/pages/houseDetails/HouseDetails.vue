@@ -1,8 +1,15 @@
 <script setup>
+import { ref } from 'vue';
 import ImageContainer from '../../components/ImageContainer.vue'
 import ScheduleMeet from '../../components/ScheduleMeet.vue'
 
-import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
+import { EyeIcon, HeartIcon, ArrowDownIcon } from "@heroicons/vue/24/outline"
+
+let continueReading = ref(false)
+
+function toggleContinueReading(){
+    continueReading.value = !continueReading.value
+}
 
 
 </script>
@@ -23,12 +30,15 @@ import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
                     <p>For Sale</p>
                 </div>
             </div>
-            <hr />
+            <div class="divider"></div>
             <div class="description_container">
                 <h2>Description</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit optio facilis quae, fuga laboriosam mollitia facere laudantium incidunt dicta? Dolore consectetur debitis reprehenderit beatae dignissimos et nisi accusamus, ullam amet?</p>
+                <p>Welcome home to this beautiful center hall Colonial located in desirable North Caldwell! This house is the epitome of old-world charm meets modern-day living. The first floor boasts an open floorplan, including a welcoming foyer and a spacious living room for entertaining. The eat-in kitchen exudes modern elegance with a marble backsplash, white cabinetry
+                    <span class="continue_reading_txt" @click="toggleContinueReading" v-if="!continueReading">...Continue Reading <ArrowDownIcon class="icon" /></span>
+                    <span v-if="continueReading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci consequatur, vitae veniam numquam modi laborum nostrum recusandae, aspernatur nam voluptate amet officia rem blanditiis voluptatibus quia natus, accusantium facilis debitis.</span>
+                </p>
             </div>
-            <hr />
+            <div class="divider"></div>
             <div class="property_detail_container">
                 <h2>Property Details</h2>
                 <div>
@@ -104,7 +114,7 @@ import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
 <style scoped>
 .house_detail_container{
     display: flex;
-    padding: 10px 100px;
+    padding: 10px 85px;
     gap: 30px;
 }
 .desciption_container{
@@ -113,12 +123,11 @@ import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
 .schedule_container{
     width: 30%;
 }
-
 .view_wrapper{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    height: 45px;
+    height: 35px;
 }
 
 .view_container {
@@ -134,7 +143,7 @@ import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
     padding: 0px 14px;
     border-radius: 5px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .icon{
@@ -148,33 +157,41 @@ import { EyeIcon, HeartIcon } from "@heroicons/vue/24/outline"
     gap: 10px;
 }
 .status{
-    height: 20px;
-    width: 20px;
-    background-color: green;
+    height: 16px;
+    width: 16px;
+    background-color: #00B67B;
     border-radius: 5px;
 }
 
 .status_wrapper p {
-    font-size: 18px;
+    font-size: 16px;
     color: #393838;
     font-weight: 600;
+    opacity: 0.8;
 }
 
+.divider{
+    margin: 20px 0px;
+    border: 1px solid #3d3d3d20;
+    height: 1px;
+}
 .description_container h2{
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
 }
 .description_container p {
-    font-size: 1.3rem;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .property_detail_container h2{
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 table{
     border-spacing: 0;
+    margin-top: 20px;
 }
 
 .table_col{
@@ -182,11 +199,21 @@ table{
     width: 50%;
     padding: 10px;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 .table_col_value{
     padding-left: 30px;
-    font-size: 1.2rem;
+    font-size: 16px;
+}
+.continue_reading_txt{
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+.continue_reading_txt .icon{
+    width: 16px;
+    font-weight: 600;
+    transform: translateY(2px);
 }
 
 @media only screen and (max-width: 1201px){

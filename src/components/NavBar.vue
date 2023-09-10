@@ -31,7 +31,7 @@ if(window.innerWidth >= 1201){
     <nav class="mobile_nav_container">
         <div class="mobile_logo_container">
             <div>
-                <img src="https://www.houzeo.com/images/new-logo.svg" alt="logo" :width="200" :height="50"/>
+                <img src="https://www.houzeo.com/images/new-logo.svg" alt="logo" :width="150" :height="50"/>
             </div>
             <div @click="toggleNav" class="mobile_icon">
                 <ListBulletIcon v-if="!showNav" class="icon"/>
@@ -112,7 +112,7 @@ if(window.innerWidth >= 1201){
     .mobile_nav_links_container li{
         padding: 15px 10px;
         color: white;
-        font-size: 22px;
+        font-size: 14px;
         cursor: pointer;
     }
 
@@ -157,9 +157,9 @@ if(window.innerWidth >= 1201){
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 110px;
+        height: 100px;
         z-index: 999;
-        padding: 0px 85px;
+        padding: 0px 80px;
         background-color: white;
         z-index: 999;
     }
@@ -173,7 +173,7 @@ if(window.innerWidth >= 1201){
         align-items: center;
         list-style: none;
         gap: 20px;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 600;
     }
     .mobile_nav_footer{
@@ -185,14 +185,14 @@ if(window.innerWidth >= 1201){
         display: flex;
         flex-direction: column;
         transform: translateY(5px);
+        font-size: 14px;
     }
     .mobile_free_listing_btn{
         padding: 10px 20px;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 600;
         border: none;
         border-radius: 5px;
-        margin-right: 15px;
         background: linear-gradient(to right, #2775c0, #0e5294);
         color: white;
     }

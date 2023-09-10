@@ -14,16 +14,16 @@ import { CurrencyDollarIcon } from "@heroicons/vue/24/outline"
                 <h2>$500,000</h2>
                 <p>Est. $4,284/mo <span class="get_approved"><CurrencyDollarIcon class="currency_icon"/>Get Pre-Approved</span></p>
             </div>
-            <div class="house_area">
-                <div class="">
+            <div class="house_area_container">
+                <div class="house_area">
                     <h2>4</h2>
                     <p>Beds</p>
                 </div>
-                <div>
+                <div class="house_area">
                     <h2>3</h2>
                     <p>Bath</p>
                 </div>
-                <div>
+                <div class="house_area">
                     <h2>998</h2>
                     <p>sq.ft</p>
                 </div>
@@ -41,6 +41,20 @@ import { CurrencyDollarIcon } from "@heroicons/vue/24/outline"
         display: flex;
         flex-direction: column;
     }
+    .house_area_container{
+        margin-top: 28px;
+    }
+    .house_area_container{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .house_details{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
 }
 .house_banner_wrapper{
     height: 100%;
@@ -48,22 +62,28 @@ import { CurrencyDollarIcon } from "@heroicons/vue/24/outline"
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 15px 80px;
     border-top: 1px solid lightgray;
-    box-shadow: 2px 4px 4px #909090;
+    box-shadow: 2px 2px 2px #8d8d8d56;
     border-radius: 0px 0px 6px 6px;
     z-index: 999;
+}
+.house_address{
+}
+.house_address h2{
+    font-size: 20px;
 }
 .house_details{
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 .house_cost{
     line-height: .4;
 }
 .house_cost h2{
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
 }
 .house_cost p{
     font-size: 16px;
@@ -71,6 +91,7 @@ import { CurrencyDollarIcon } from "@heroicons/vue/24/outline"
 .get_approved{
     margin-left: 10px;
     color: #115ea7;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -79,20 +100,22 @@ import { CurrencyDollarIcon } from "@heroicons/vue/24/outline"
     transform: translateY(7px);
 }
 
-.house_area{
+.house_area_container{
     display: flex;
     margin-left: 20px;
-    line-height: .4;
-    gap: 30px;
+    gap: 20px;
+}
+.house_area h2{
+    font-size: 20px;
 }
 .offer button{
     border: none;
-    padding: 15px 25px;
+    padding: 10px 20px;
     height: 100%;
     background-color: #f15d28;
     color: white;
-    font-size: 22px;
-    border-radius: 6px;
+    font-size: 16px;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
 }

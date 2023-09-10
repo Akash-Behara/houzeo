@@ -47,7 +47,7 @@ function showModal(url) {
 </script>
 
 <template>
-    <div>
+    <div class="people_review_container">
         <h2>Real People, Real Stories</h2>
         <p>See how buyers & sellers across America asre saving on commision using Houzeo technology</p>
         <div class="people_list_container">
@@ -90,22 +90,39 @@ function showModal(url) {
     backdrop-filter: blur(5px);
     z-index: 9999;
 }
+.people_review_container{
+    border: 1px solid #00000026;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px #58575710;
+}
+.people_review_container h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.people_review_container p {
+    font-size: 14px;
+    color: #707070;
+    margin-top: 10px;
+}
 .people_list_container{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 20px;
 }
 .people_list{
     display: flex;
 }
 
 .people_card{
-    width: 155px;
+    width: 108px;
     border-radius: 6px;
 }
 .people_img{
     width: 100%;
-    height: 100px;
+    height: 71px;
     position: relative;
 }
 
@@ -136,7 +153,7 @@ function showModal(url) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 45px;
+    width: 35px;
     color: white;
 }
 
@@ -146,8 +163,15 @@ function showModal(url) {
     transition: ease-in-out 200ms ;
 }
 .people_details{
-    line-height: .4;
+    margin: 10px;
+    transform: translateX(-8px);
 }
-
+.people_details h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+.people_details p {
+    font-size: 10px;
+}
 
 </style>

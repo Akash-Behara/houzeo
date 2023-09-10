@@ -17,17 +17,13 @@ import  HouseDetails from './pages/houseDetails/housedetails.vue'
 
 <style scoped>
 .nav{
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 999;
 }
 .main{
-  margin-top: 240px;
+  margin-top: 20px;
 }
-@media only screen and (max-width: 1201px){
-  .main{
-    margin-top: 360px;
-  }
-}
+
 </style>

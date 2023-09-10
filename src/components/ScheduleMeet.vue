@@ -70,7 +70,7 @@ const foo = generateHoursInterval(startDate, endDate, interval);
                 </Carousel>
             </div>
             <div class="time_slider">
-                <Carousel class="time_slider_slick" :items-to-show="6" :items-to-scroll="2">
+                <Carousel class="time_slider_slick" :items-to-show="5" :items-to-scroll="2">
                     <Slide v-for="(time, idx) in foo" :key="idx">
                         <div class="time_card">{{time}}</div>
                     </Slide>
@@ -82,7 +82,7 @@ const foo = generateHoursInterval(startDate, endDate, interval);
             <div class="schedule_btn_container">
                 <button>Schedule Showing</button>
             </div>
-            <p class="schdeule_cancel_txt">Its free with no obligation - cancel anytime All times in EDT</p>
+            <p class="schdeule_cancel_txt">It’s free, with no obligation - cancel anytime All times in EDT</p>
         </div>
 
         <div>
@@ -96,6 +96,11 @@ const foo = generateHoursInterval(startDate, endDate, interval);
     border: 1px solid lightgray;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px #58575710;
+}
+.schedule_container h2{
+    font-size: 18px;
+    font-weight: 600;
 }
 .toggle_session{
     display: flex;
@@ -107,6 +112,7 @@ const foo = generateHoursInterval(startDate, endDate, interval);
     justify-content: space-around;
     align-items: center;
     font-weight: 700;
+    margin-top: 15px;
 }
 .toggle_session .active{
     width: 50%;
@@ -131,8 +137,8 @@ const foo = generateHoursInterval(startDate, endDate, interval);
 }
 
 .day_card{
-    height: 110px;
-    width: 100px;
+    height: 78px;
+    width: 81px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +146,7 @@ const foo = generateHoursInterval(startDate, endDate, interval);
     border-radius: 8px;
     padding: 10px 15px;
     margin: 0px 5px;
-    border: 1px solid lightgray
+    border: 1px solid #bbbbbbb1
 }
 
 .day_card:hover{
@@ -148,16 +154,19 @@ const foo = generateHoursInterval(startDate, endDate, interval);
 }
 
 .day{
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .date{
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 600;
     margin: 2px 0px
 }
+.month{
+    font-size: 14px;
+}
 .date_slider{
-    margin-top: 10px;
+    margin: 20px 0px;
 }
 
 .time_card{
@@ -180,7 +189,8 @@ const foo = generateHoursInterval(startDate, endDate, interval);
 .schedule_btn_container button{
     padding: 12px 0px;
     border: none;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 600;
     width: 100%;
     color: white;
     border-radius: 5px;
@@ -189,8 +199,9 @@ const foo = generateHoursInterval(startDate, endDate, interval);
 }
 
 .schdeule_cancel_txt{
-    margin-top: 20px;
-    color: rgb(138, 138, 138);
+    font-size: 12px;
+    margin: 10px 0px;
+    color: #707070;
 
 }
 
